@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int *get_Indexes(int *nums, int target, int len)
+int *get_Indexes(int *nums, int len, int target)
 {
 	int i,j;
 	int candidato;
@@ -29,6 +29,7 @@ int *get_Indexes(int *nums, int target, int len)
 			return result;
 		}
 	}
+	printf("%d,%d",i,j);
 	return NULL;
 	
 }
