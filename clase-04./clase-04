@@ -1,0 +1,18 @@
+stack-conjunto de elementos de lo que sea, FIFO, etc
+vector-buscar
+lista-buscar
+diccionario-generalmente usan una hastable para implementarlos.
+
+typedef			unsiged char		unchar
+struct-Un arreglo en donde todas las variables pueden ser de diferente tipo, una clase sin funciones, una estructura-> struct s{}			
+
+ADT-tipo de dato abstracto
+typedef struct dict{
+	char *key; 		//!= char key[250];
+	void *value;
+	
+upsert-> si no existe lo crea, de otra manera lo actualiza
+
+upser dictionary (char *key, void *value)
+getValueDictionary (char *key)
+getKeysDictionary ();
