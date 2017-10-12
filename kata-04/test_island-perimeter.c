@@ -25,12 +25,12 @@ static char * test_unit() {
 	}
 	int expected = 16;
 	int result = island_perimeter(island_pointer, rows, cols);
-	mu_assert("Wrong Perimeter.", result == expected);
+	muAssert("Wrong Perimeter.", result == expected);
 	return 0;
 }
 
 static char * all_tests() {
-	mu_run_test(test_unit);
+	muRunTest(test_unit);
 	return 0;
 }
 int main(int argc, char **argv) {
@@ -49,6 +49,6 @@ int main(int argc, char **argv) {
 		printf("_-_-_-_-_-_-_-  \"\"  \"\" \n");
 		printf(KGRN " ✓ ALL TESTS PASSED \n" RESET);
 	}
-	printf("Tests run: %d\n", tests_run);
+	printf("Tests run: %d\n", testsRun);
 	return result != 0;
 }

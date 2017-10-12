@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 	for (i = 0; i < row; i++) {
 		island[i] = (int *) malloc(sizeof(int *) * col);
 		j = 0;
-		printf("please write the coordinates, '1' is land and '0' is water: \n", i);
+		printf("Please write the coordinates, '1' is land and '0' is water: \n");
 		printf("island %d:\n", i);
 		scanf("%s", row_message);
 		row_tok = strtok(row_message, delim);
