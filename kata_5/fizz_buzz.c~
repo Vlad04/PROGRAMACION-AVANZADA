@@ -1,0 +1,47 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "fizz_buzz.h"
+#include <string.h>
+
+/** fizzbuzz
+  *
+  * The user gives a number, represented in the code as 'n', then is printed a list trhough n.
+  * As instructions said, for multiples of three, the output is 'Fizz', for multiples of
+  * five, output 'Buzz', and for both output 'FizzBuzz'.
+  * @param:
+  *   n - limit number.
+  *   return_size - size of the returning char ** .
+  * @return:
+  *   char ** - list of strings of the series.
+**/
+
+
+char ** Fizzbuzz (int n, int * return_size) {
+    int i;
+    char print[11];
+    char ** result = (char **) malloc(sizeof(char * ) * n);
+    for (i = 1; i <= n; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            if (i % 5 != 0) {
+                strcpy(print, "Fizz");
+                result[i - 1] = (char *) malloc(sizeof(char) * 5);
+            }
+            else if (i % 3 != 0) {
+                strcpy(print, "Buzz");
+                result[i - 1] = (char *) malloc(sizeof(char) * 5);
+            }
+            else {
+                strcpy(print, "FizzBuzz");
+                result[i - 1] = (char *) malloc(sizeof(char) * 9);
+            }
+        }
+        else {
+            sprintf(print, "%d", i);
+            result[i - 1] = (char *) malloc(sizeof(char) * strlen(print));
+        }
+        strcpy(result[i - 1], print);
+    }
+    *return_size = n;
+    return result;
+}
+
