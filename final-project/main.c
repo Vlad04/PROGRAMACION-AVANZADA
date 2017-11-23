@@ -1,0 +1,21 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "fibonacci.h"
+#include <time.h>
+
+
+/* Add function signatures here */
+
+int main()
+{
+    int n;
+    printf("Value of number: "); scanf("%d", &n);
+    printf("nth FIbonacci number: "); fib(n);
+
+    /*srand(time(NULL));   
+    int r = rand()%10; 
+    printf("%d\n",r);
+    */
+    return 0;
+}
+
